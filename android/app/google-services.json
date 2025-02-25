@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "959401608695",
+    "project_id": "e-learning-c20cc",
+    "storage_bucket": "e-learning-c20cc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959401608695:android:786f2be2b9a842156e5af2",
+        "android_client_info": {
+          "package_name": "com.example.e_learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1yrjaEiq5N_lLrLvVt2ouHvaxAJB2oXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
