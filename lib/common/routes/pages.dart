@@ -1,4 +1,6 @@
 import 'package:e_learning/pages/application/application_page.dart';
+import 'package:e_learning/pages/application/bloc/app_blocs.dart';
+import 'package:e_learning/pages/home/home_page.dart';
 import 'package:e_learning/pages/register/bloc/register_blocs.dart';
 import 'package:e_learning/pages/register/register.dart';
 import 'package:e_learning/pages/sign_in/bloc/sign_in_blocs.dart';
@@ -7,6 +9,7 @@ import 'package:e_learning/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:e_learning/pages/welcome/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../pages/home/bloc/home_page_blocs.dart';
 import 'names.dart';
 
 class AppPages {
@@ -32,8 +35,12 @@ class AppPages {
       PagesEntity(
         route: AppRoutes.APPLICATION,
         page: ApplicationPage(),
-        bloc: null,
-        // ApplicationPage ma bloc xaina (ApplicationPage doesn't have a bloc)
+        bloc: BlocProvider(create: (_) => AppBlocs()),
+      ),
+      PagesEntity(
+        route: AppRoutes.HOME_PAGE,
+        page: HomePage(),
+        bloc: BlocProvider(create: (_) => HomePageBlocs()),
       ),
     ];
   }

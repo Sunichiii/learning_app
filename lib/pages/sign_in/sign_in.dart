@@ -5,7 +5,6 @@ import 'package:e_learning/pages/sign_in/widgets/sign_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../common_widgets.dart';
 
 class SignIn extends StatefulWidget {

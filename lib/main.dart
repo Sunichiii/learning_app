@@ -1,5 +1,6 @@
 import 'package:e_learning/common/routes/pages.dart';
 import 'package:e_learning/pages/application/application_page.dart';
+import 'package:e_learning/pages/welcome/welcome.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       providers: [...AppPages.allBlocProviders(context)],
       // Sabai valid BlocProvider haru pass gareko (Passing all valid BlocProviders)
       child: ScreenUtilInit(
+        designSize: const Size(375,812),
         builder: (context, child) => MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
@@ -39,14 +41,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("My Home Page")),
-    );
-  }
-}
