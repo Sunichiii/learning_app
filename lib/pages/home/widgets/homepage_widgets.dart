@@ -4,9 +4,8 @@ import 'package:e_learning/pages/home/bloc/home_page_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../common/values/colors.dart';
-import '../../home/bloc/home_page_blocs.dart';
+import '../bloc/home_page_blocs.dart';
 
 AppBar buildAppBar() {
   return AppBar(
@@ -27,7 +26,9 @@ AppBar buildAppBar() {
                 height: 40.h,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/icons/person.png")))),
+                        image: AssetImage("assets/icons/person.png")),
+                ),
+            ),
           ),
         ],
       ),
@@ -185,9 +186,11 @@ Widget menuView() {
           children: [
             _reusableMenuText("All"),
             _reusableMenuText("Popular",
-                textColor: AppColors.primaryThreeElementText, backGroundColor: Colors.white),
+                textColor: AppColors.primaryThreeElementText,
+                backGroundColor: Colors.white),
             _reusableMenuText("Latest",
-                textColor: AppColors.primaryThreeElementText, backGroundColor: Colors.white),
+                textColor: AppColors.primaryThreeElementText,
+                backGroundColor: Colors.white),
           ],
         ),
       )
@@ -230,5 +233,48 @@ Widget _reusableMenuText(String menuText,
             color: textColor, fontSize: 11, fontweight: FontWeight.normal),
       )
     ]),
+  );
+}
+
+
+//tala ko course grid ko lagi
+Widget courseGrid(){
+  return Container(
+    padding: EdgeInsets.all(12.w),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15.w),
+        image: DecorationImage(
+            fit: BoxFit.fill,
+            image:
+            AssetImage("assets/icons/image_2.png"))),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Text(
+          "Best course for IT",
+          maxLines: 1,
+          textAlign: TextAlign.left,
+          softWrap: false,
+          overflow: TextOverflow.fade,
+          style: TextStyle(
+              color: AppColors.primaryElementText,
+              fontWeight: FontWeight.bold,
+              fontSize: 11.sp),
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Flutter Best Course",
+          maxLines: 2,
+          textAlign: TextAlign.left,
+          softWrap: false,
+          overflow: TextOverflow.fade,
+          style: TextStyle(
+              color: AppColors.primaryFourElementText,
+              fontWeight: FontWeight.normal,
+              fontSize: 8.sp),
+        ),
+      ],
+    ),
   );
 }
